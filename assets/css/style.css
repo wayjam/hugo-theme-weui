@@ -44,8 +44,10 @@ header a:hover {
   font-size: 14px;
 }
 
-.site_header a:visited {
-  color: inherit;
+.site_header .site__title a,
+.site_header .site__title a:hover,
+.site_header .site__title a:active {
+  color: var(--weui-FG);
 }
 
 .pagination .weui-btn {
@@ -96,13 +98,17 @@ header a:hover {
   line-height: 18px;
 }
 
-.article-list h4 a,
-.article-list h4 a:visited,
-.article-list h4 a:active {
+.content a {
+  color: var(--weui-LINK);
+}
+
+.article-list .post-title,
+.article-list .post-title:visited,
+.article-list .post-title:active {
   color: var(--weui-FG-0);
 }
 
-.article-list h4 a:hover {
+.article-list .post-title:hover {
   color: var(--weui-LINK);
 }
 
@@ -111,7 +117,7 @@ header a:hover {
 }
 
 .terms .tag a {
-  color: var(--weui-FG-1);
+  color: var(--weui-FG);
 }
 
 .terms .tag a:hover {

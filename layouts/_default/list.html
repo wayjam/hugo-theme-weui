@@ -1,10 +1,10 @@
 {{ define "main" }}
-<section class="weui-cells">
+<section class="weui-cells article-list">
   {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
   {{ range $paginator.Pages }}
   <a class="weui-cell weui-cell_access" href="{{ .Permalink }}">
     <div class="weui-cell__bd">
-      <p>{{ .Title }}</p>
+      <p class="post-title">{{ .Title }}</p>
     </div>
     <div class="weui-cell__ft">{{ .Date.Format "Jan 2, 2006" }}</div>
   </a>

@@ -6,7 +6,7 @@
     {{ $paginator := .Paginate site.RegularPages }}
     {{ range $paginator.Pages }}
       <div class="weui-media-box weui-media-box_text weui-flex__item weui-article">
-          <h4 class="weui-media-box__title"><a href="{{ .Permalink}}" title="{{ .LinkTitle }}">{{ .Title }}</a></h4>
+          <h4 class="weui-media-box__title"><a href="{{ .Permalink}}" title="{{ .LinkTitle }}" class="post-title">{{ .Title }}</a></h4>
           <p class="weui-media-box__desc">{{ .Summary | safeHTML }}</p>
           <ul class="weui-media-box__info">
             <li class="weui-media-box__info__meta">{{ .Date.Format "January 2, 2006" }}</li>
