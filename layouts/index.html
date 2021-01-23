@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="article-list weui-flex ">
+<div class="weui-panel">
+  <div class="weui-panel__hd">Articles</div>
+  <div class="weui-panel__bd">
+    {{ $paginator := .Paginate (where site.RegularPages "Section" "in" site.Params.mainSections) }}
+    {{ range $paginator.Pages }}
+          <div class="weui-media-box weui-media-box_text weui-flex__item weui-article">
+              <h4 class="weui-media-box__title"><a href="{{ .Permalink}}" title="{{ .LinkTitle }}">{{ .Title }}</a></h4>
+              <p class="weui-media-box__desc">{{ .Summary | safeHTML }}</p>
+              <ul class="weui-media-box__info">
+                <li class="weui-media-box__info__meta">{{ .Date.Format "January 2, 2006" }}</li>
+                <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{ .Section }}</li>
+            </ul>
+          </div>
+    {{ end }}
+  </div>
+  <div class="weui-panel__ft">
+    <a href="javascript:" class="weui-cell weui-cell_active weui-cell_access weui-cell_link">
+        <div class="weui-cell__bd">查看更多</div>
+        <span class="weui-cell__ft"></span>
+    </a>    
+  </div>
+
+</div>
+</div>
+
+{{ end }}

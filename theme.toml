@@ -1,0 +1,13 @@
+name = "weui"
+license = "MIT"
+licenselink = "https://github.com/siegerts/hugo-theme-weui/blob/master/LICENSE"
+description = "Simple blog theme styled with weui"
+homepage = "https://github.com/siegerts/hugo-theme-weui"
+tags = ["minimal", "weui", "blog", "responsive", "syntax highlighting", "google analytics", "mobile]
+features = ["blog", "syntax highlighting", "google analytics", "weui"]
+min_version = "0.76.5"
+
+[author]
+	name = "WayJam So"
+	homepage = "https://github.com/wayjam"
+

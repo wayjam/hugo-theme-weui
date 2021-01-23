@@ -1,0 +1,40 @@
+baseURL = "https://www.example.com/"
+title = "WeUI"
+theme ="weui"
+languageCode = "en-us"
+googleAnalytics = "UA-XXXXXXXXX-X"
+enableEmoji = true
+paginate=3
+# copyright="xxx"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  description = "Basic personal site theme styled with weiui, syntax highlighting."
+
+
+[[menu.main]]
+  name = "blog"
+  url = "posts/"
+
+[[menu.main]]
+  name = "tags"
+  url = "tags/"
+  
+
+[[menu.main]]
+  name = "about"
+  url = "about/"
+  
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true

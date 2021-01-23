@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <section id="main" class="weui-grids">
+    {{ range .Data.Terms.Alphabetical }} {{ if ne .Page.Title "" }}
+      <div class="weui-grid">
+        <p class="weui-grid__label">
+        <a href="{{ .Page.Permalink }}" title="last seen at {{ .Page.Lastmod.Format "January 02, 2006" }}">{{ .Page.Title }}<span class="weui-badge" style="margin-left: 5px;">{{ .Count }}</span></a>
+        </p>
+      </div>
+      {{ end }} {{ end }}
+  </section>
+{{ end }}
