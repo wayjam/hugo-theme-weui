@@ -1,3 +1,16 @@
+body,
+footer {
+  background-color: var(--weui-BG-1);
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+main {
+  margin-top: 0.5rem;
+}
+
 .container {
   position: absolute;
   top: 0;
@@ -15,7 +28,7 @@
 .site_header .site__title {
   text-align: left;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .site_header .site__desc {
@@ -23,4 +36,56 @@
   color: var(--weui-FG-1);
   text-align: left;
   font-size: 14px;
+}
+
+.site_header a:visited {
+  color: inherit;
+}
+
+.pagination .weui-btn {
+  margin-top: auto !important;
+}
+
+.inner-container {
+  margin: 8px 0;
+  background-color: var(--weui-BG-2);
+  overflow: hidden;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.terms .tag {
+  background-color: var(--weui-BG-2);
+}
+
+.content {
+  padding: 1rem;
+}
+
+.content hr {
+  margin: 0.5em auto;
+}
+
+.content ul,
+.content ol {
+  margin-left: 1.5em;
+}
+
+.content pre {
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 3px;
+}
+
+.content pre code {
+  background-color: var(--weui-BG-3);
+}
+
+.content pre,
+.content code,
+.content kbd,
+.content samp {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+  line-height: 18px;
 }

@@ -1,8 +1,25 @@
 {{ define "main" }}
-{{ range .Pages }}
-    <article class="text-gray-700 sm:mx-12 mb-16 prose lg:prose-lg">
-        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-        {{ .Content }}
-    </article>
-{{ end }}
+<section class="weui-cells">
+  {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
+  {{ range $paginator.Pages }}
+  <a class="weui-cell weui-cell_access" href="{{ .Permalink }}">
+    <div class="weui-cell__bd">
+      <p>{{ .Title }}</p>
+    </div>
+    <div class="weui-cell__ft">{{ .Date.Format "Jan 2, 2006" }}</div>
+  </a>
+  {{ end }}
+  {{ if and (gt $paginator.TotalPages 1) ($paginator.HasPrev) }}
+  <a class="weui-flex__item weui-btn weui-btn_default" href="{{ $paginator.Prev.URL }}">
+    <div class="weui-cell__bd">Back</div>
+    <span class="weui-cell__ft"></span>
+  </a>
+  {{ end }}
+  {{ if and (gt $paginator.TotalPages 1) ($paginator.HasNext) }}
+  <a class="weui-flex__item weui-btn weui-btn_default" href="{{ $paginator.Next.URL }}">
+    <div class="weui-cell__bd">More</div>
+    <span class="weui-cell__ft"></span>
+  </a>
+  {{ end }}  
+</section>
 {{ end }}

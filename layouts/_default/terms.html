@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <section id="main" class="weui-grids">
+  <section class="terms weui-grids">
     {{ range .Data.Terms.Alphabetical }} {{ if ne .Page.Title "" }}
-      <div class="weui-grid">
+      <div class="weui-grid tag">
         <p class="weui-grid__label">
         <a href="{{ .Page.Permalink }}" title="last seen at {{ .Page.Lastmod.Format "January 02, 2006" }}">{{ .Page.Title }}<span class="weui-badge" style="margin-left: 5px;">{{ .Count }}</span></a>
         </p>

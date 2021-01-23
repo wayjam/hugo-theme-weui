@@ -6,6 +6,7 @@ googleAnalytics = "UA-XXXXXXXXX-X"
 enableEmoji = true
 paginate=3
 # copyright="xxx"
+pygmentsCodefences=false  # to use highlight js
 
 [taxonomies]
   category = "categories"
@@ -14,19 +15,21 @@ paginate=3
 [params]
   description = "Basic personal site theme styled with weiui, syntax highlighting."
 
-
 [[menu.main]]
   name = "blog"
   url = "posts/"
+  weight = 1
 
 [[menu.main]]
   name = "tags"
   url = "tags/"
+  weight = 1
   
 
 [[menu.main]]
   name = "about"
   url = "about/"
+  weight = 2
   
 
 [privacy]

@@ -4,12 +4,14 @@
     {{ with site.Params.Description }}
       <p class="site__desc">{{ . }}</p>
     {{ end }}
-</div>
+  </div>
   <div class="weui-tab">
     <div class="weui-navbar">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-        <div class="weui-navbar__item {{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Section .Identifier) }} weui-bar__item_on{{ end }}">
+        {{ $active := eq $.RelPermalink (.URL | relLangURL) }}
+        {{ $active = or $active (eq $.Section (lower .Name)) }}
+        <div class="weui-navbar__item {{ if $active }} weui-bar__item_on{{ end }}">
           <a href="{{ .URL | relURL }}" title="{{ or .Title .Name }}">{{ .Name }}</a>
         </div>
       {{ end }}
