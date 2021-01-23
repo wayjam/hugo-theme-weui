@@ -1,6 +1,12 @@
 # hugo-theme-weui
 
-A simple hugo theme which is built with [weui](https://github.com/Tencent/weui).
+[![hugo-theme-weui](https://img.shields.io/badge/Hugo%20Theme-%40weui-blue)](https://themes.gohugo.io/hugo-theme-weui/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.76-orange)](https://gohugo.io/)
+![GitHub](https://img.shields.io/github/license/wayjam/hugo-theme-weui)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wayjam/hugo-theme-weui)
+![Netlify](https://img.shields.io/netlify/ac8ca626-646f-45a5-86d4-a182877ebb1f)
+
+A simple hugo theme which is built with [weui](https://github.com/Tencent/weui). You can preview this theme at a [Live Demo](https://hugo-weui-demo.netlify.app/).
 
 ## Installation
 
