@@ -9,17 +9,19 @@
     <div class="weui-cell__ft">{{ .Date.Format "Jan 2, 2006" }}</div>
   </a>
   {{ end }}
-  {{ if and (gt $paginator.TotalPages 1) ($paginator.HasPrev) }}
-  <a class="weui-flex__item weui-btn weui-btn_default" href="{{ $paginator.Prev.URL }}">
-    <div class="weui-cell__bd">Back</div>
-    <span class="weui-cell__ft"></span>
-  </a>
-  {{ end }}
-  {{ if and (gt $paginator.TotalPages 1) ($paginator.HasNext) }}
-  <a class="weui-flex__item weui-btn weui-btn_default" href="{{ $paginator.Next.URL }}">
-    <div class="weui-cell__bd">More</div>
-    <span class="weui-cell__ft"></span>
-  </a>
-  {{ end }}  
+  <div class="weui-flex pagination">
+    {{ if and (gt $paginator.TotalPages 1) ($paginator.HasPrev) }}
+    <a class="weui-flex__item weui-btn weui-btn_default" href="{{ $paginator.Prev.URL }}">
+      <div class="weui-cell__bd">Back</div>
+      <span class="weui-cell__ft"></span>
+    </a>
+    {{ end }}
+    {{ if and (gt $paginator.TotalPages 1) ($paginator.HasNext) }}
+    <a class="weui-flex__item weui-btn weui-btn_default" href="{{ $paginator.Next.URL }}">
+      <div class="weui-cell__bd">More</div>
+      <span class="weui-cell__ft"></span>
+    </a>
+    {{ end }}
+  </div>
 </section>
 {{ end }}

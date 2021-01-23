@@ -11,6 +11,12 @@ main {
   margin-top: 0.5rem;
 }
 
+header a,
+header a:visited,
+header a:hover {
+  color: var(--weui-LINK);
+}
+
 .container {
   position: absolute;
   top: 0;
@@ -88,4 +94,30 @@ main {
 .content samp {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
   line-height: 18px;
+}
+
+.article-list h4 a,
+.article-list h4 a:visited,
+.article-list h4 a:active {
+  color: var(--weui-FG-0);
+}
+
+.article-list h4 a:hover {
+  color: var(--weui-LINK);
+}
+
+.pagination .weui-cell__bd {
+  font-weight: 400;
+}
+
+.terms .tag a {
+  color: var(--weui-FG-1);
+}
+
+.terms .tag a:hover {
+  color: var(--weui-TAG-TEXT-BLUE);
+}
+.terms .tag a .weui-badge {
+  background-color: var(--weui-FG-3);
+  color: var(--weui-TAG-TEXT-BLACK);
 }

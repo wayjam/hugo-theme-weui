@@ -22,8 +22,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/weui@2.4.1/dist/style/weui.min.css">
 
-    {{ $style := resources.Get "css/style.css" | minify }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" rel="preload stylesheet" as="style"/>
+    {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}"  rel="preload stylesheet" as="style"/>
 
     <link
     rel="stylesheet"
